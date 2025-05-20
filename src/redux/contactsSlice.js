@@ -1,30 +1,33 @@
-import { createAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-export const addContact = createAction("contact/addContact");
-export const deleteContact = createAction("contact/deleteContact");
-
-const initialState = {
-  contacts: {
-    items: [],
+const contacts = createSlice({
+  name: "contacts",
+  initialState: {
+    contacts: {
+      items: [],
+    },
   },
-};
+  redusers: {
+    addContact: (state, action) => {
+      //   return {
+      //     ...state,
+      //     contacts: [...state.contacts.items, action.payload],
+      //   };
+      state.contacts.items.push(action.payload);
+    },
 
-export default function createSlice(state = initialState, action) {
-  switch (action.type) {
-    case "contact / addContact":
-      return {
-        ...state,
-        contacts: [...state.contacts.items, action.payload],
-      };
-    case "contact/deleteContact":
-      return {
-        ...state,
-        contacts: state.contacts.itemsfilter(
-          (task) => task.id !== action.payload
-        ),
-      };
-
-    default:
-      return state;
-  }
-}
+    deleteContact: (state, action) => {
+      //   return {
+      //     ...state,
+      //     contacts: state.contacts.itemsfilter(
+      //       (task) => task.id !== action.payload
+      //     ),
+      //   };
+      state.contacts.items = state.contacts.items.filter(
+        (contact) => contact.id !== action.payload
+      );
+    },
+  },
+});
+export const { addContact, deleteContact } = contacts.actions;
+export default contacts.reducer;
