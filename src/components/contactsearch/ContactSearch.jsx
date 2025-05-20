@@ -6,8 +6,7 @@ const ContactSearch = () => {
   const dispatch = useDispatch();
   const handleChange = (e) => {
     e.preventDefault();
-    const val = e.target.value.trim();
-    dispatch(changeFilter(val));
+    dispatch(changeFilter(e.target.value.trim()));
   };
 
   return (

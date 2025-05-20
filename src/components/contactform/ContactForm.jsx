@@ -7,6 +7,9 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
+    if (form.elements.text.value === "") {
+      return;
+    }
     dispatch(
       addContact({
         id: crypto.randomUUID(),
