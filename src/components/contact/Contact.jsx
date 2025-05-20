@@ -1,4 +1,4 @@
-import css from "./Task.module.css";
+import css from "./Contact.module.css";
 
 const Task = ({ data: { id, text }, onDelete }) => {
   return (

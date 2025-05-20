@@ -9,12 +9,6 @@ const filtersContactsReduser = createSlice({
   },
   reducers: {
     changeFilter: (state, action) => {
-      //   return {
-      //     ...state,
-      //     filters: {
-      //       state: action.payload,
-      //     },
-      //   };
       state.filters.name === action.payload;
     },
   },
