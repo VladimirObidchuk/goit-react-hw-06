@@ -27,10 +27,6 @@ const localStoreReduser = combineReducers({
   filters: filtersReducer,
 });
 
-// export const store = configureStore({
-//   reducer: { contacts: contactsReducer, filters: filtersReducer },
-// });
-
 export const store = configureStore({
   reducer: localStoreReduser,
   middleware: (getDefaultMiddleware) =>
