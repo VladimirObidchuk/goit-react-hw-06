@@ -11,8 +11,18 @@ const ContactSearch = () => {
   };
 
   return (
-    <div className={css}>
-      <input type="text" name="search" onChange={handleChange} />
+    <div className={css.seachContact}>
+      <label htmlFor="search" className={css.label}>
+        Search
+      </label>
+      <input
+        id="search"
+        type="text"
+        name="search"
+        onChange={handleChange}
+        className={css.input}
+        placeholder="Enter contact...."
+      />
     </div>
   );
 };

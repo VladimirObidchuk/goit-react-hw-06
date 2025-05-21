@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+.main {
+  width: 1024px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 80%;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+}
