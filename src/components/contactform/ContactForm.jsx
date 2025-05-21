@@ -7,8 +7,8 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    if (form.elements.text.value === "" && form.elements.tel.value === "") {
-      return;
+    if (form.elements.text.value === "" || form.elements.tel.value === "") {
+      return alert("Please. Enter name and phone");
     }
     dispatch(
       addContact({
