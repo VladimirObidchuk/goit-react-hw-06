@@ -7,6 +7,7 @@ const ContactSearch = () => {
   const handleChange = (e) => {
     e.preventDefault();
     dispatch(changeFilter(e.target.value.trim()));
+    console.log(e.target.value);
   };
 
   return (
