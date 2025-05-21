@@ -27,7 +27,9 @@ const ContactForm = () => {
         placeholder="Enter contact name...."
         className={css.field}
       />
-      <button type="submit">Add contact</button>
+      <button type="submit" className={css.btn}>
+        Add contact
+      </button>
     </form>
   );
 };

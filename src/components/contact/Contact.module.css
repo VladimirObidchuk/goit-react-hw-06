@@ -6,3 +6,10 @@
   justify-content: space-between;
   color: #fff;
 }
+.btn {
+  color: #fff;
+  background-color: #85a8eb;
+}
+.btn:hover {
+  background-color: #4c6799;
+}

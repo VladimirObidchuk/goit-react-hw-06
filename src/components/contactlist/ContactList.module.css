@@ -15,7 +15,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
   border-radius: 16px;
   padding: 5px 10px;
 }
