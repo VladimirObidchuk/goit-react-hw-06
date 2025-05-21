@@ -1,13 +1,13 @@
 import { useDispatch } from "react-redux";
 import { changeFilter } from "../../redux/filtersSlice";
-import css from "./ContactSearch.module.css";
+import css from "./SearchBox.module.css";
 
-const ContactSearch = () => {
+const SearchBox = () => {
   const dispatch = useDispatch();
   const handleChange = (e) => {
     e.preventDefault();
+
     dispatch(changeFilter(e.target.value.trim()));
-    console.log(e.target.value);
   };
 
   return (
@@ -26,4 +26,4 @@ const ContactSearch = () => {
     </div>
   );
 };
-export default ContactSearch;
+export default SearchBox;

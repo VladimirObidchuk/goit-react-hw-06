@@ -7,13 +7,14 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    if (form.elements.text.value === "") {
+    if (form.elements.text.value === "" && form.elements.tel.value === "") {
       return;
     }
     dispatch(
       addContact({
         id: crypto.randomUUID(),
         name: form.elements.text.value,
+        tel: form.elements.tel.value,
       })
     );
     console.log(" form", form.elements.text.value);
@@ -25,6 +26,12 @@ const ContactForm = () => {
         type="text"
         name="text"
         placeholder="Enter contact name...."
+        className={css.field}
+      />
+      <input
+        type="tel"
+        name="tel"
+        placeholder="Enter contact phone...."
         className={css.field}
       />
       <button type="submit" className={css.btn}>

@@ -4,6 +4,7 @@ const filtersContactsReduser = createSlice({
   name: "filters",
   initialState: {
     name: "",
+    tel: null,
   },
   reducers: {
     changeFilter: (state, action) => {
